@@ -1,0 +1,32 @@
+.sideBtn {
+    -fx-padding: 0 30 0 30;
+    -fx-background: none;
+    -fx-graphic-text-gap: 30;
+    -fx-font-family: 'Roboto';
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: black;
+    -fx-wrap-text: true;
+    -fx-cursor: hand;
+    -fx-alignment left;
+}
+
+#summary {
+    -fx-graphic: url(../assets/chart-line-solid.png);
+}
+
+#inventory {
+    -fx-graphic: url(../assets/warehouse-solid.png);
+}
+
+#ar {
+    -fx-graphic: url(../assets/hand-holding-heart-solid.png);
+}
+
+#donors {
+    -fx-graphic: url(../assets/user-plus-solid.png);
+}
+
+#transac {
+    -fx-graphic: url(../assets/receipt-solid.png);
+}

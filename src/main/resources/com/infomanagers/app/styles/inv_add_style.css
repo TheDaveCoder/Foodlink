@@ -1,0 +1,20 @@
+.titler {
+    -fx-text-fill: #7F7F7F;
+}
+
+.selection {
+    -fx-background-color: white;
+    -fx-border-color: #ED7A07;
+    -fx-border-radius: 5;
+}
+
+#uploadSelection {
+    -fx-border-radius: 5 0 0 5;
+}
+
+#uploadSelectionFile {
+    -fx-border-radius: 0 5 5 0;
+    -fx-background-radius: 0 5 5 0;
+    -fx-background-color: #ED7A07;
+    -fx-text-fill: white;
+}

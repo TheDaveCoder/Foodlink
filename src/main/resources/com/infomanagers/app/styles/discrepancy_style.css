@@ -1,0 +1,39 @@
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #584634;
+    -fx-background-radius: 7;
+    -fx-padding: 5 0 5 0;
+    -fx-text-background-color: #584634;
+}
+
+.table-view .column-header {
+    -fx-background-color: #584634;
+    -fx-background-radius: 7;
+    -fx-font-family: 'Roboto';
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-row-cell:filled {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #E9B888;
+    -fx-padding: 5 0 5 0;
+    -fx-font-family: 'Roboto';
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+}
+
+#discrepancyBtn {
+    -fx-graphic: url(../assets/switch.png);
+}

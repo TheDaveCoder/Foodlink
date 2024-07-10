@@ -1,0 +1,31 @@
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+    -fx-border-width: 2 0 2 0;
+    -fx-border-color: #E9B888;
+    -fx-padding: 5 0 5 0;
+    -fx-text-background-color: #5F480E;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-font-family: 'Roboto';
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.table-row-cell:filled {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #E9B888;
+    -fx-padding: 5 0 5 0;
+    -fx-font-family: 'Roboto';
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+}
+
+.table-cell {
+    -fx-alignment: CENTER;
+}

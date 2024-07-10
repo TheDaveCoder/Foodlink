@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.infomanagers.app.Controller.SummaryController">
+   <top>
+      <BorderPane maxWidth="1.7976931348623157E308" stylesheets="@../styles/header_style.css" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="56.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/logo_cropped.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-text-fill: black;" text="FoodLink">
+                     <font>
+                        <Font name="Roboto Medium" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </left>
+         <padding>
+            <Insets bottom="20.0" left="90.0" right="90.0" top="20.0" />
+         </padding>
+         <right>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="accountBtn" mnemonicParsing="false" onAction="#clickedAccount" style="-fx-cursor: hand;" styleClass="headerBtn" text="Account" />
+                  <Button fx:id="helpBtn" mnemonicParsing="false" onAction="#clickedHelp" style="-fx-cursor: hand;" styleClass="headerBtn" text="Help" />
+               </children>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+   <center>
+      <StackPane alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0">
+               <center>
+                  <VBox fx:id="parentBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="100.0" spacing="30.0">
+                           <children>
+                              <VBox style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <BorderPane prefHeight="38.0" prefWidth="237.0">
+                                       <left>
+                                          <Label style="-fx-text-fill: black;" text="DONORS" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <ImageView fitHeight="43.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                             <image>
+                                                <Image url="@../assets/hand-holding-heart-solid.png" />
+                                             </image>
+                                          </ImageView>
+                                       </right>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </BorderPane>
+                                    <Label fx:id="donorCount" maxHeight="300.0" maxWidth="1.7976931348623157E308" style="-fx-text-fill: black; -fx-border-color: #ED8F30; -fx-border-width: 0 0 5 0;" text="999">
+                                       <font>
+                                          <Font name="Roboto Bold" size="58.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <left>
+                                          <Label fx:id="newDonor" style="-fx-text-fill: black;" text="+0 New Donors" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <Label fx:id="newDonorDate" style="-fx-text-fill: black;" text="Some Date" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </right>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets bottom="15.0" left="30.0" right="30.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <BorderPane prefHeight="38.0" prefWidth="237.0">
+                                       <left>
+                                          <Label style="-fx-text-fill: black;" text="RECIPIENTS" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <ImageView fitHeight="43.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                             <image>
+                                                <Image url="@../assets/user-plus-solid.png" />
+                                             </image>
+                                          </ImageView>
+                                       </right>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </BorderPane>
+                                    <Label fx:id="recipientCount" maxHeight="300.0" maxWidth="1.7976931348623157E308" style="-fx-text-fill: black; -fx-border-color: #ED8F30; -fx-border-width: 0 0 5 0;" text="999">
+                                       <font>
+                                          <Font name="Roboto Bold" size="58.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <left>
+                                          <Label fx:id="newRecipients" style="-fx-text-fill: black;" text="+0 New Recipients" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <Label fx:id="newRecipientDate" style="-fx-text-fill: black;" text="Some Date" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </right>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="30.0" right="30.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <BorderPane prefHeight="38.0" prefWidth="237.0">
+                                       <left>
+                                          <Label style="-fx-text-fill: black;" text="UNITS" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <ImageView fitHeight="43.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                             <image>
+                                                <Image url="@../assets/box-solid.png" />
+                                             </image>
+                                          </ImageView>
+                                       </right>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </BorderPane>
+                                    <Label fx:id="unitCount" maxHeight="300.0" maxWidth="1.7976931348623157E308" style="-fx-text-fill: black; -fx-border-color: #ED8F30; -fx-border-width: 0 0 5 0;" text="999">
+                                       <font>
+                                          <Font name="Roboto Bold" size="58.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <left>
+                                          <Label fx:id="newUnits" style="-fx-text-fill: black;" text="+0 Units of Goods" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </left>
+                                       <right>
+                                          <Label fx:id="newUnitDate" style="-fx-text-fill: black;" text="Some Date" BorderPane.alignment="CENTER">
+                                             <font>
+                                                <Font name="Roboto Medium" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </right>
+                                       <padding>
+                                          <Insets top="20.0" />
+                                       </padding>
+                                    </BorderPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="30.0" right="30.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <LineChart fx:id="graph" stylesheets="@../styles/linechart_style.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </LineChart>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="150.0" right="100.0" top="20.0" />
+                     </BorderPane.margin>
+                  </VBox>
+               </center></BorderPane>
+            <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" spacing="40.0" style="-fx-background-color: ED8F30; -fx-background-radius: 0 30 30 0;" stylesheets="@../styles/sidebutton_style.css">
+               <children>
+                  <Button id="summary" fx:id="summary" maxWidth="797.0" mnemonicParsing="false" style="-fx-alignment: left;" styleClass="sideBtn">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button id="inventory" fx:id="inventory" maxWidth="300.0" mnemonicParsing="false" onAction="#clickedInventory" styleClass="sideBtn" />
+                  <Button id="ar" fx:id="donors" maxWidth="300.0" mnemonicParsing="false" onAction="#clickedDonors" style="-fx-alignment: left;" styleClass="sideBtn" />
+                  <Button id="donors" fx:id="ar" maxWidth="300.0" mnemonicParsing="false" onAction="#clickedAr" style="-fx-alignment: left;" styleClass="sideBtn" />
+                  <Button id="transac" fx:id="history" maxHeight="-Infinity" maxWidth="300.0" mnemonicParsing="false" onAction="#clickedHistory" styleClass="sideBtn" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="40.0" top="40.0" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
